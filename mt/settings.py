@@ -101,4 +101,6 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# https://stackoverflow.com/questions/53859972/django-whitenoise-500-server-error-in-non-debug-mode
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
